@@ -26,7 +26,7 @@
     <InstallUrl>https://share.geozukunft.at/software/CSV/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -53,10 +53,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C08558787814D8E6F0A3331002AFE07F89B5945C</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>BC50C212B608F4FDCE2B82CDA6D320B061D707E9</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>CSV-Einlesen_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>CSV-Einlesen_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -98,6 +98,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CSV-Einlesen_1_TemporaryKey.pfx" />
     <None Include="CSV-Einlesen_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -290,6 +290,8 @@ namespace CSV_Einlesen
                 datafile = null;
                 lboSum.Items.Clear();
                 lboRawData.Items.Clear();
+                dataStream.Clear();
+                sumList.Clear();
             }
 
             

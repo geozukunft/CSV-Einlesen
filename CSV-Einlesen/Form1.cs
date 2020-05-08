@@ -293,7 +293,7 @@ namespace CSV_Einlesen
                 dataStream.Clear();
                 sumList.Clear();
             }
-
+           
         }
     }
 }

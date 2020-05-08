@@ -277,9 +277,22 @@ namespace CSV_Einlesen
             
         }
 
-       /* private void CtrlS(object sender, KeyEventArgs e)
+        /*private void CtrlS(object sender, KeyEventArgs e)
         {
             if(e.Key == Key.S && Keyboard.Modifiers == ModifierKeys.Control)
         }*/
+
+        private void clearUserInputToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(String.Format("Sind Sie sicher, dasss sie die Datei {0} ohne zu speichern schließen möchten und alle ungespeicherten Informationen löschen?", filename), "Datei Schließen Daten Löschen", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                datafile = null;
+                lboSum.Items.Clear();
+                lboRawData.Items.Clear();
+            }
+
+            
+        }
     }
 }

@@ -154,6 +154,7 @@
             this.clearUserInputToolStripMenuItem.Name = "clearUserInputToolStripMenuItem";
             this.clearUserInputToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.clearUserInputToolStripMenuItem.Text = "Clear User Input";
+            this.clearUserInputToolStripMenuItem.Click += new System.EventHandler(this.clearUserInputToolStripMenuItem_Click);
             // 
             // Form1
             // 

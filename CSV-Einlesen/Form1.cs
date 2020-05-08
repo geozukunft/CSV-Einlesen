@@ -139,7 +139,11 @@ namespace CSV_Einlesen
             bool truedata = false;
             foreach (string line in File.ReadLines(datafile))
             {
-                if (!(budgetRegex(line)))
+                if(string.IsNullOrEmpty(line))
+                {
+                    truedata = true;
+                }
+                else if (!(budgetRegex(line)))
                 {
                     truedata = false;
                 }
@@ -152,7 +156,11 @@ namespace CSV_Einlesen
             {
                 foreach (string line in File.ReadLines(datafile))
                 {
-                    dataStream.Add(line);
+                    if(!(string.IsNullOrEmpty(line)))
+                    {
+                        dataStream.Add(line);
+                    }
+                    
                 }
             }
             else

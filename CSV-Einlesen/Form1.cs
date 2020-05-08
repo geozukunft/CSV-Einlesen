@@ -144,7 +144,7 @@ namespace CSV_Einlesen
 
         private void readData()
         {
-            bool truedata = false;
+            bool truedata = true;
             foreach (string line in File.ReadLines(datafile))
             {
                 if(string.IsNullOrEmpty(line))
@@ -294,7 +294,6 @@ namespace CSV_Einlesen
                 sumList.Clear();
             }
 
-            
         }
     }
 }

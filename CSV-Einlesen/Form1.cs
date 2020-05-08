@@ -136,10 +136,32 @@ namespace CSV_Einlesen
 
         private void readData()
         {
-            foreach(string line in File.ReadLines(datafile))
+            bool truedata = false;
+            foreach (string line in File.ReadLines(datafile))
+            {
+                if (!(budgetRegex(line)))
                 {
-                dataStream.Add(line); 
+                    truedata = false;
+                }
+                else
+                {
+                    truedata = true;
+                }
             }
+            if(truedata)
+            {
+                foreach (string line in File.ReadLines(datafile))
+                {
+                    dataStream.Add(line);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Die ausgewählte Datei entspricht nicht dem gewünschtem Format!");
+                datafile = null;
+            }
+            
+            
         }
 
         private void updateData()

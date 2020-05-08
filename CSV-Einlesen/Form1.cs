@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Collections;
-
+using System.Windows.Input;
+using System.Windows;
+using System.Xml;
 
 namespace CSV_Einlesen
 {
@@ -24,6 +26,7 @@ namespace CSV_Einlesen
         {
             InitializeComponent();
             lblLastChanged.Text = "Zuletzt geändert:";
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -267,7 +270,16 @@ namespace CSV_Einlesen
 
         private void updateTime()
         {
-            lblLastChanged.Text = "Zuletzt geändert: " + File.GetLastWriteTime(datafile).ToLongTimeString() + " " + File.GetLastWriteTime(datafile).ToLongDateString();
+            if(datafile != null)
+            {
+                lblLastChanged.Text = "Zuletzt geändert: " + File.GetLastWriteTime(datafile).ToLongTimeString() + " " + File.GetLastWriteTime(datafile).ToLongDateString();
+            }
+            
         }
+
+       /* private void CtrlS(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.S && Keyboard.Modifiers == ModifierKeys.Control)
+        }*/
     }
 }

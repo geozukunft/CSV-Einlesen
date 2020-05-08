@@ -216,6 +216,8 @@ namespace CSV_Einlesen
                     MessageBox.Show("Bitte überprüfen Sie Ihre Eingabe. Format: ZAHL;ZAHL;ZAHL", "Fehlerhafte Eingabe", MessageBoxButtons.OK);
                     txtInput.Clear();
                 }
+                e.Handled = true; //Suppress Windows Notify Sound when pressing Enter
+                
             }
         }
 

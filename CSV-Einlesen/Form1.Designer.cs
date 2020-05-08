@@ -40,6 +40,7 @@
             this.txtInput = new System.Windows.Forms.TextBox();
             this.lblInfotext = new System.Windows.Forms.Label();
             this.lblLastChanged = new System.Windows.Forms.Label();
+            this.clearUserInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.OpenFile_toolStripMenuItem,
             this.speichernToolStripMenuItem,
             this.speichernSchließenToolStripMenuItem,
+            this.clearUserInputToolStripMenuItem,
             this.löschenToolStripMenuItem,
             this.schließenToolStripMenuItem});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
@@ -147,6 +149,12 @@
             this.lblLastChanged.TabIndex = 16;
             this.lblLastChanged.Text = "label1";
             // 
+            // clearUserInputToolStripMenuItem
+            // 
+            this.clearUserInputToolStripMenuItem.Name = "clearUserInputToolStripMenuItem";
+            this.clearUserInputToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.clearUserInputToolStripMenuItem.Text = "Clear User Input";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +190,7 @@
         public System.Windows.Forms.Label lblInfotext;
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
         private System.Windows.Forms.Label lblLastChanged;
+        private System.Windows.Forms.ToolStripMenuItem clearUserInputToolStripMenuItem;
     }
 }
 

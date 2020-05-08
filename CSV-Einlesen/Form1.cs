@@ -64,7 +64,7 @@ namespace CSV_Einlesen
 
         private void schließenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Sind Sie sicher, dass sie das Programm beenden möchten ohne vorher zu speichern?", "Schließen ohne Speichern", MessageBoxButtons.OKCancel);
+            DialogResult result = MessageBox.Show("Sind Sie sicher, dass sie das Programm beenden möchten ohne vorher zu speichern?", "Schließen ohne Speichern", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
 
@@ -76,7 +76,7 @@ namespace CSV_Einlesen
         {
             if (datafile == null)
             {
-                MessageBox.Show("Keine Datei zum speichern ausgwählt bitte öffnen sie zuerst eine Datei!");
+                MessageBox.Show("Keine Datei zum speichern ausgwählt bitte öffnen sie zuerst eine Datei!", "Datei auswählen" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -95,7 +95,7 @@ namespace CSV_Einlesen
         {
             if (datafile == null)
             {
-                MessageBox.Show("Keine Datei zum speichern ausgwählt bitte öffnen sie zuerst eine Datei!");
+                MessageBox.Show("Keine Datei zum speichern ausgwählt bitte öffnen sie zuerst eine Datei!","Datei auswählen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -122,7 +122,7 @@ namespace CSV_Einlesen
         {
             if(datafile == null)
             {
-                MessageBox.Show("Keine Datei geöffnet welche gelöscht werden kann.");
+                MessageBox.Show("Keine Datei geöffnet welche gelöscht werden kann.","Keine Datei ausgewählt" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -165,7 +165,7 @@ namespace CSV_Einlesen
             }
             else
             {
-                MessageBox.Show("Die ausgewählte Datei entspricht nicht dem gewünschtem Format!");
+                MessageBox.Show("Die ausgewählte Datei entspricht nicht dem gewünschtem Format!","Fehlerhafte Datei", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 datafile = null;
             }
             
@@ -213,7 +213,7 @@ namespace CSV_Einlesen
                 }
                 else
                 {
-                    MessageBox.Show("Bitte überprüfen Sie Ihre Eingabe. Format: ZAHL;ZAHL;ZAHL", "Fehlerhafte Eingabe", MessageBoxButtons.OK);
+                    MessageBox.Show("Bitte überprüfen Sie Ihre Eingabe. Format: ZAHL;ZAHL;ZAHL", "Fehlerhafte Eingabe", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtInput.Clear();
                 }
                 e.Handled = true; //Suppress Windows Notify Sound when pressing Enter

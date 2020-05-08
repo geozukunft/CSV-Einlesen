@@ -39,6 +39,7 @@
             this.lboSum = new System.Windows.Forms.ListBox();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.lblInfotext = new System.Windows.Forms.Label();
+            this.lblLastChanged = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,11 +138,21 @@
             this.lblInfotext.TabIndex = 15;
             this.lblInfotext.Text = "Daten bitte mit \";\" getrennt einfügen und mit Enter bestätigen";
             // 
+            // lblLastChanged
+            // 
+            this.lblLastChanged.AutoSize = true;
+            this.lblLastChanged.Location = new System.Drawing.Point(406, 39);
+            this.lblLastChanged.Name = "lblLastChanged";
+            this.lblLastChanged.Size = new System.Drawing.Size(35, 13);
+            this.lblLastChanged.TabIndex = 16;
+            this.lblLastChanged.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 566);
+            this.Controls.Add(this.lblLastChanged);
             this.Controls.Add(this.lblInfotext);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.lboSum);
@@ -170,6 +181,7 @@
         private System.Windows.Forms.TextBox txtInput;
         public System.Windows.Forms.Label lblInfotext;
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
+        private System.Windows.Forms.Label lblLastChanged;
     }
 }
 

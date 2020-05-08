@@ -23,6 +23,7 @@ namespace CSV_Einlesen
         public Form1()
         {
             InitializeComponent();
+            lblLastChanged.Text = "Zuletzt geändert:";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -88,6 +89,8 @@ namespace CSV_Einlesen
 
                     file.Close();
                 }
+
+                updateTime();
             }
         }
 
@@ -131,6 +134,8 @@ namespace CSV_Einlesen
                 {
                     File.Delete(datafile);
                 }
+
+                lblLastChanged.Text = "Zuletzt geändert:";
             }
         }
 
@@ -199,6 +204,8 @@ namespace CSV_Einlesen
                 lboSum.Items.Add(sum);
             }
 
+            updateTime();
+
         }
 
         private void txtInput_KeyPress(object sender, KeyPressEventArgs e)
@@ -256,6 +263,11 @@ namespace CSV_Einlesen
             }
 
             return true;
+        }
+
+        private void updateTime()
+        {
+            lblLastChanged.Text = "Zuletzt geändert: " + File.GetLastWriteTime(datafile).ToLongTimeString() + " " + File.GetLastWriteTime(datafile).ToLongDateString();
         }
     }
 }
